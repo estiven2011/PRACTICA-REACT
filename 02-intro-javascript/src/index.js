@@ -30,6 +30,7 @@ const nuevoObjeto = ({nombre, edad, clave}) => {
         }
     }
 }
+
 const usuarioNew = nuevoObjeto(persona)
 console.log('usuario nuevo con las variables cambiadas pero tomando las ya creadas',usuarioNew);
 
@@ -46,7 +47,7 @@ console.log('usuario nuevo con las variables cambiadas pero tomando las ya cread
 
 //? forma dos
 const {name, anios, latitud} =  usuarioNew /* OR nuevoObjeto(persona) */  /* Aca se puede inicialixar sea con la creacion de la constante o con la ejecucion de la funcion  */
-const {lat:latitu, lon:longitu} = latitud
+const {lat:latitu, lon:longitu} = latitud /* Aca se le cambia el nombre ala variable */
 console.log('desde la segunda forma de la desestructuracion de objeto dentro de otro objeto',latitu, longitu);
 
 
