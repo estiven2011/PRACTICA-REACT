@@ -1,4 +1,3 @@
-// * EJEMPLOS DEL VIDEO
 const persona = {
     nombre: 'Tony',
     edad: 45,
@@ -24,11 +23,32 @@ console.log('funcion con la desetructuracion en los apramteros de la funcion los
 const nuevoObjeto = ({nombre, edad, clave}) => {
     return {
         name:nombre,
-        anios:edad
+        anios:edad,
+        latitud: {
+            lat:555,
+            lon:3223
+        }
     }
 }
+
 const usuarioNew = nuevoObjeto(persona)
 console.log('usuario nuevo con las variables cambiadas pero tomando las ya creadas',usuarioNew);
+
+// const {name, anios} = usuarioNew
+// console.log('desetructuracion de la nueva varibale (objeto): ',name, anios);
+
+// const {name, anios} = nuevoObjeto(persona) otra opcion que hace lo mismo que mi funcion de arriba
+
+//* Desestructuracion de un objeto dentro de otro objeto
+// ? Forma uno
+const {name, anios, latitud:{lat, lon}} =  nuevoObjeto(persona)
+console.log(lat, ',', lon);
+console.log('desestruturacion de un objeto dentro de otro objeto',nuevoObjeto(persona));
+
+//? forma dos
+// const {name, anios, latitud} =  usuarioNew /* OR nuevoObjeto(persona) */  /* Aca se puede inicialixar sea con la creacion de la constante o con la ejecucion de la funcion  */
+// const {lat:latitu, lon:longitu} = latitud /* Aca se le cambia el nombre ala variable */
+// console.log('desde la segunda forma de la desestructuracion de objeto dentro de otro objeto',latitu, longitu);
 
 
 // const {nombre} =  persona
