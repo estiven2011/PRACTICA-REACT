@@ -60,4 +60,32 @@ console.log('desestruturacion de un objeto dentro de otro objeto',nuevoObjeto(pe
 // console.log(persona.edad);
 // console.log(persona.clave);
 
+const futbolista2 = {
+    name: 'Neymar',
+    dorsal: 11,
+    equipo: {
+        españa: 'barca',
+        brasil: 'santos'
+    }
+}
 
+// Esta funcion se llamaba futbolista
+const useContext = ({capitan='si', equipo:{españa: espa, brasil: bra}, dorsal, name, equipo}) => {
+    
+    return {
+        nombre: name,
+        numero: dorsal,
+        espa,
+        bra,
+        equipo
+    }
+
+    
+}
+
+const ney = useContext(futbolista2);
+console.log(ney);
+
+
+const {nombre, numero, equipo} = useContext(futbolista2)
+console.log(equipo)
