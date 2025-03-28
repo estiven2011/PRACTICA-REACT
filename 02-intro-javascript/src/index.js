@@ -1,3 +1,2 @@
-import {heroes} from './data/heroes'
+// PROMESAS
 
-console.log(heroes);
