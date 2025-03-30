@@ -1,25 +1,25 @@
 import heroes, {owners} from '../data/heroes'
 
-console.log(owners);
+// console.log(owners);
 
 
-const getHeroesById = (id) => {
+export const getHeroesById = (id) => {
     return heroes.find((heroe) => {
         //? mi solucion
-        return heroe.id == 2
+        // return heroe.id == 2
 
         //! otra opcion, que es mas escalable - la vi en el video
-        // if(heroe.id == id) {
-        //     return heroe
-        // }else {
-        //     return false
-        // }
+        if(heroe.id == id) {
+            return heroe
+        }else {
+            return false
+        }
 
         // * otra opcion del video, es las mas simpllificada
         // heroe.id == id
     })
 }
-console.log(getHeroesById(2));
+// console.log(getHeroesById(2));
 
 
 // TAREA
@@ -34,4 +34,4 @@ console.log(getHeroesById(2));
 // * solucion video
 const getHeroesByOwner = (owner) => heroes.filter ((heroe) => heroe.owner == owner)
 
-console.log(getHeroesByOwner('DC'), 'este es el filter');
+// console.log(getHeroesByOwner('DC'), 'este es el filter');
