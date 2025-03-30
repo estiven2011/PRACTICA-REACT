@@ -21,7 +21,6 @@ const getPromiseHeroeByIdAsync = (id) => {
     return new Promise ((resolve, reject) => {
 
         setTimeout(() => {
-            // console.log('hola desde el setTimeout despues de 3 segundos');
             const heroe = getHeroesById(id)
             if(heroe){
                 resolve('Heroe desde el resolve', heroe)
@@ -30,7 +29,6 @@ const getPromiseHeroeByIdAsync = (id) => {
             }
         }, 3000)
     })
-
 
 } 
 
