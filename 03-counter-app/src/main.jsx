@@ -9,6 +9,6 @@ function App () {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirstApp/>
+        <FirstApp num={123} />
     </React.StrictMode>
 )
