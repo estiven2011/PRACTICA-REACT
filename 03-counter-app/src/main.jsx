@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom/client'
-import { FirstApp } from "./firstApp";
+import { FirstApp } from "./FirstApp";
 
 
 function App () {
@@ -9,6 +9,7 @@ function App () {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirstApp num={123} />
+        <FirstApp num={123} title="soy un titulo" />
+        <App></App>
     </React.StrictMode>
 )
